@@ -1,0 +1,14 @@
+<% @events.each do |event| %>
+<div class="event">
+	<div class="image-container">
+		<div class="image">
+			<%= image_tag("events/"+event[:image]) %>
+		</div>
+	</div>
+	<div class="event-body">
+		<div class="event-header"><%= event[:name] %></div>
+		<span class="emphasis weighted"><%= event[:name] %></span>
+		<span><%= event[:description] %></span>
+	</div>
+</div>
+<% end %>

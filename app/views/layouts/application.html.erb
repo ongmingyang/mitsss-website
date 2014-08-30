@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<!--
+  Webpage written by Ming Yang
+  me@ongmingyang.com
+-->
+<html>
+<head>
+  <title>MITSSS | <%= @page_title %></title>
+  <%= stylesheet_link_tag 'application', media: 'all', "data-turbolinks-track" => true %>
+  <%= favicon_link_tag 'favicon.ico' %>
+  <%= csrf_meta_tag %>
+</head>
+<body>
+
+<div id="bg-image-top-wrapper">
+        <div id="bg-image-top"></div>
+</div>
+<div id="bg-image-bottom">
+<div id="body">
+        <nav id="main">
+                <%= link_to 'Home', home_url %>
+                <%= link_to 'About', about_url %>
+                <%= link_to 'Events', events_url %>
+                <%= link_to 'Join', join_url %>
+        </nav>
+        <div id="content">
+                <div class="titlebar">
+                        <span class="emphasis">MITSSS</span><span><%= @page_title %></span>
+                </div>
+                <%= yield %>
+        </div>
+</div>
+</div>
+<div id="footer">
+        <div>
+                <span>Copyright &copy; 2013 MITSSS - All Rights Reserved</span>
+        </div>
+        <div>
+                <span aria-hidden='true' class='icon-envelop footer-icon'></span>
+                <span><%= mail_to email, 'Contact us' %></span>
+                <span aria-hidden='true' class='icon-facebook footer-icon'></span>
+                <span><%= link_to 'Facebook', facebook %></span>
+        <div>
+</div>
+
+</body>
+</html>

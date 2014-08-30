@@ -1,0 +1,26 @@
+<div class="splash">
+	<div class="image-container">
+		<%= image_tag("main1.jpg") %>
+	</div>
+	<div class="image-container">
+		<%= image_tag("main2.jpg") %>
+	</div>
+	<div class="image-container">
+		<%= image_tag("main3.jpg") %>
+	</div>
+	<div class="image-container">
+		<%= image_tag("main4.jpg") %>
+	</div>
+	<div class="image-container">
+		<%= image_tag("main5.jpg") %>
+	</div>
+	<div style="clear: both;"></div>
+</div>
+
+<p>
+Founded in 1986, The Massachusetts Institute of Technology Singapore Students Society (MITSSS) is a MIT-registered student group that seeks to foster friendship and promote cultural exchange between Singaporeans and members of the MIT community. The MITSSS is active in the Greater Boston area, and organises annual events and meetups for the Singaporean community at large.
+</p><p>
+The process of signing up as a member of the MITSSS is free of charge. Membership is not limited to Singaporeans or MIT students; it is open to anyone with an interest in Singaporean culture. <%= link_to 'Register now!', join_url %>
+</p><p>
+The MITSSS committee can be contacted by <%= mail_to email, 'email' %> or through <%= link_to 'facebook', facebook %>. 
+</p>

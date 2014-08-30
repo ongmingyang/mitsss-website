@@ -1,0 +1,37 @@
+<p>The MITSSS is founded upon its <%= link_to 'Constitution', constitution_url %>.</p>
+
+<h1>Current Committee (2014/2015)</h1>
+
+<% @current_committee.each do |person| %>
+<div class="person">
+	<div class="image-container">
+		<div class="image">
+			<%= image_tag("current_committee/"+person[:image]) %>
+		</div>
+	</div>
+	<div class="person-text">
+		<span class="emphasis weighted"><%= person[:name]  %></span>
+		<span><%= person[:description] %></span>
+	</div>
+</div>
+<% end %>
+
+<div style="clear: both;"></div>
+
+<h1>Past Committees</h1>
+
+<% @past_committees.each do |year, members| %>
+<div class="comm-entry">
+	<div class="comm-year"><%= year %></div>
+	<div class="comm-persons">
+		<% members.each do |position, name| %>
+			<div class="comm-position"><%= position %></div>
+			<div class="comm-name"><%= name %></div>
+		<% end %>
+	</div>
+	<div style="clear: both;"></div>
+</div>
+<% end %>
+
+<div style="clear: both;"></div>
+
