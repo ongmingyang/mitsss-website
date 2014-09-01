@@ -21,10 +21,6 @@ class HomeController < ApplicationController
     @events = Event.select("name, description, image")
   end
 
-  def join
-    @page_title = 'join'
-  end
-
   def constitution
     @page_title = 'constitution'
   end
