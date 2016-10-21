@@ -24,6 +24,9 @@ class HomeController < ApplicationController
   def constitution
     @page_title = 'constitution'
   end
-
+  
+  def poll
+    @page_title = 'constitution'
+  end
 end
 
