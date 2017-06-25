@@ -5,7 +5,11 @@ Rails4::Application.routes.draw do
   get 'about' => 'home#about', :as => :about
   get 'events' => 'home#events', :as => :events
   get 'about/constitution/' => 'home#constitution', :as => :constitution
-
+  get 'poll' => 'home#poll', :as => :poll
+  
+  get 'kopitiamposter' => 'home#poster', :as => :kopitiamposter
+  get 'kopitiam' => 'home#kopitiamapp', :as => :kopitiam
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
